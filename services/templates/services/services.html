@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="pt-page" data-id="services">
+        <div class="section-inner custom-page-content">
+            <div class="page-header color-1">
+                <h2>خدمات</h2>
+            </div>
+            <div class="page-content">
+                <!-- My Services -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="block-title">
+                            <h3><span>خدمات</span> من</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service-block">
+                            <div class="service-info">
+                                <!--<i class="service-icon fa fa-shopping-cart"></i>-->
+                                <div class="service-image">
+                                    <img src="{% static  'images/service/web_design_icon.png' %}" alt="Responsive Design"
+                                         class="mCS_img_loaded">
+                                </div>
+                                <h4>طراحی وب</h4>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service-block">
+                            <div class="service-info">
+                                <div class="service-image">
+                                    <img src="{% static 'images/service/photography_icon.png' %}" alt="Photography"
+                                         class="mCS_img_loaded">
+                                </div>
+                                <h4>عکاسی</h4>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service-block">
+                            <div class="service-info">
+                                <div class="service-image">
+                                    <img src="{% static 'images/service/creativity_icon.png' %}" alt="Creativity"
+                                         class="mCS_img_loaded">
+                                </div>
+                                <h4>مدیریت</h4>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="service-block">
+                            <div class="service-info">
+                                <div class="service-image">
+                                    <img src="{% static 'images/service/advetising_icon.png' %}" alt="Advetising"
+                                         class="mCS_img_loaded">
+                                </div>
+                                <h4>تبلیغات</h4>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of My Services -->
+{% endblock content %}
