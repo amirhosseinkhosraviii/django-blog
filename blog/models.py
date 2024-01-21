@@ -8,7 +8,7 @@ class Post(models.Model):
         ('pub', 'publish'),
         ('dr', 'draft'),
     )
-    images = models.ImageField(upload_to='blog/')
+    images = models.ImageField(upload_to='blog/', null=True)
     title = models.CharField(max_length=200)
     content = models.TextField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
