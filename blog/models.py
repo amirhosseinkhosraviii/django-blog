@@ -8,7 +8,7 @@ class Post(models.Model):
         ('pub', 'publish'),
         ('dr', 'draft'),
     )
-    images = models.ImageField(upload_to='blog/', null=True)
+    images = models.ImageField(upload_to='blog')
     title = models.CharField(max_length=200)
     content = models.TextField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -23,7 +23,7 @@ class Post(models.Model):
     #     self.published_date = timezone.now()
     #     self.save()
     class Meta:
-        ordering = ['created_date']
+        ordering = ['-created_date']
 
     def __str__(self):
         return self.title
