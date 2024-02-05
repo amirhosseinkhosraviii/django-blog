@@ -23,7 +23,7 @@ class Post(models.Model):
     #     self.published_date = timezone.now()
     #     self.save()
     class Meta:
-        ordering = ['-created_date']
+        ordering = ['created_date']
 
     def __str__(self):
         return self.title
