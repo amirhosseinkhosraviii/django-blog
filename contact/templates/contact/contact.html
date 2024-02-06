@@ -59,14 +59,15 @@
 
                     <div class="col-sm-6 col-md-6">
                         <div class="block-title">
+
                             <h3><span>تماس</span> با من</h3>
 
 
 
                         </div>
-                        <form id="contact-form" method="post" action="contact_form/contact_form.php">
+                        <form id="contact-form" method="post" action="{% url 'contact:contact' %}">
                             {% csrf_token %}
-                            {% for form in form %}
+                                {% for form in form %}
                                 {{ form.as_p}}
 
                             {% endfor %}
@@ -82,7 +83,7 @@
 
                                     <i class="fa fa-user"></i>
 
-                                    <label>نام کامل</label>
+                                    <label>نام کامل{{ message_name }}</label>
                                     <input id="form_name" type="text" name="name" class="form-control"
                                            placeholder required="required"
                                            data-error="وارد کردن نام الزامی است.">

@@ -9,12 +9,19 @@ from django.core.exceptions import ObjectDoesNotExist
 
 def contact_view(request):
     if request.method == "Post":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('contact')
+        message_name = request.POST['message_name']
+        message_email = request.POST['message_email']
+        message_subject = request.POST['message_subject']
+        return redirect(request, 'contact/contact.html', {'message_name': message_name})
+
+        # form = ContactForm(request.POST)
+        # if form.is_valid():
+        #     form.save()
+
     else:
         form = ContactForm()
     contact = Contact.objects.all()
     context = {}
     return render(request, 'contact/contact.html', {'form': form})
+
+# def contact_view(request):
