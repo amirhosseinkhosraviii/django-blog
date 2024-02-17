@@ -4,7 +4,7 @@ from .models import Post
 
 # Register your models here.
 
-# @admin.register(Post)
+
 class PostAdmin(admin.ModelAdmin):
     
     date_hierarchy = 'created_date'

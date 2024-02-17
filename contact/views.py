@@ -21,5 +21,3 @@ def contact_view(request):
     contact = Contact.objects.all()
     context = {}
     return render(request, 'contact/contact.html', {'form': form})
-
-# def contact_view(request):

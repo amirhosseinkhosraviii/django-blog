@@ -10,6 +10,6 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ('name', 'message')
 
 
-# admin.site.register(Contact, ContactAdmin)
+
 admin.site.register(Contact, ContactAdmin)
 
